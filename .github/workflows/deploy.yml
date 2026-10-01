@@ -1,0 +1,32 @@
+# Publica esta invitación en https://invitalive.pe/henry-50
+# Compila el proyecto y copia el resultado a la carpeta henry-50/ del
+# repositorio InvitaLive-digital/web-oficial (el que tiene el dominio).
+name: Deploy to invitalive.pe/henry-50
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Publish into org root repo subfolder
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUBLISH_TOKEN }}
+          external_repository: InvitaLive-digital/web-oficial   # repo con el dominio
+          publish_branch: main
+          publish_dir: dist                                     # resultado de "npm run build"
+          destination_dir: henry-50                             # subcarpeta = dirección
