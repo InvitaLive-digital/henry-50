@@ -58,7 +58,7 @@ export const PROGRAMA = [
   { time: 'Después de la misa', title: 'Recepción de invitados', desc: 'Bienvenida y reencuentro con familiares y amigos.' },
   { time: '12:30 PM', title: 'Palabras y brindis', desc: 'Unas palabras de la familia y un brindis en honor a Henry.' },
   { time: '01:00 PM', title: 'Almuerzo de celebración', desc: 'Compartimos la mesa en este día tan especial.' },
-  { time: '02:30 PM', title: 'Cerveceada', desc: 'Brindis y cerveceada entre familia y amigos, como manda la tradición.' },
+  { time: '02:30 PM', title: 'Cerveceada', desc: 'Brindis y cerveceada entre familia y amigos.' },
   { time: '03:00 PM', title: 'Palpa', desc: 'Entrega de presentes y muestras de cariño para Henry.' },
   { time: '05:00 PM', title: 'Hora Loca', desc: 'Baile, alegría y mucha energía para todos.' },
   { time: '06:00 PM', title: 'Cumpleaños feliz', desc: 'Cantamos juntos por sus 50 años.' },
