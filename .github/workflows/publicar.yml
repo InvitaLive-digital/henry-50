@@ -26,9 +26,18 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # Arma el sitio: la página principal en la raíz y cada invitación en su carpeta
+      #   invitalive.pe/           → inicio/index.html
+      #   invitalive.pe/henry-50/  → la invitación (dist)
+      - name: Armar sitio
+        run: |
+          mkdir -p _site/henry-50
+          cp -R dist/. _site/henry-50/
+          cp -R inicio/. _site/
+          touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: build

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitalive · Invitaciones digitales</title>
+    <meta name="description" content="Invitaciones digitales para momentos inolvidables." />
+    <meta name="theme-color" content="#060C1C" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      html, body { height: 100%; }
+      body {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        text-align: center;
+        color: #F7EFE2;
+        font-family: 'Outfit', system-ui, sans-serif;
+        background:
+          radial-gradient(ellipse 60% 45% at 50% 35%, rgba(212, 175, 106, 0.14), transparent 70%),
+          radial-gradient(ellipse at 50% 40%, #14254F 0%, #060C1C 70%);
+      }
+      main {
+        width: 100%;
+        max-width: 520px;
+        padding: 56px 28px;
+        position: relative;
+        border: 1px solid rgba(212, 175, 106, 0.4);
+        background: linear-gradient(160deg, rgba(20, 37, 79, 0.6), rgba(6, 12, 28, 0.8));
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        animation: aparecer 1s ease both;
+      }
+      main::before {
+        content: '';
+        position: absolute;
+        inset: 7px;
+        border: 1px solid rgba(212, 175, 106, 0.15);
+        pointer-events: none;
+      }
+      .tag {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: #F1D9A6;
+      }
+      h1 {
+        font-family: 'Great Vibes', cursive;
+        font-weight: 400;
+        font-size: clamp(4rem, 19vw, 6.5rem);
+        line-height: 1.15;
+        padding: 0 0.15em;
+        background: linear-gradient(180deg, #FFF3D6 0%, #F1D9A6 35%, #D4AF6A 65%, #A8813F 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 18px rgba(212, 175, 106, 0.4));
+      }
+      .linea {
+        width: 180px;
+        height: 2px;
+        margin: 6px auto 26px;
+        background: linear-gradient(to right, transparent, #F1D9A6, transparent);
+      }
+      p.frase {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 1.35;
+        color: rgba(247, 239, 226, 0.9);
+      }
+      @keyframes aparecer {
+        from { opacity: 0; transform: translateY(18px); }
+        to   { opacity: 1; transform: none; }
+      }
+      @media (prefers-reduced-motion: reduce) { main { animation: none; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="tag">Invitaciones digitales</p>
+      <h1>Invitalive</h1>
+      <div class="linea"></div>
+      <p class="frase">Para momentos que merecen<br />celebrarse y recordarse.</p>
+    </main>
+  </body>
+</html>
