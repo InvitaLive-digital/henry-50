@@ -84,7 +84,7 @@ export const TEXTO_PORTADA =
 export const TEXTO_BOTON = 'Te esperamos · Descubre más'
 
 // ── Crédito al pie de la invitación ──────────────────────────────
-export const CREDITO_WEB = 'https://invitalive.pe'
+export const CREDITO_WEB = 'https://www.instagram.com/invitalive/' // a dónde lleva "invitalive.pe" al hacer clic
 // Enlace del Instagram de Invitalive, ej: 'https://instagram.com/invitalive.pe'
 // (si está vacío, no se muestra el ícono)
 export const INSTAGRAM_URL = ''
