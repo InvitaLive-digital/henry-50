@@ -8,7 +8,7 @@ import {
   MAPA_EMBED_URL, MAPA_LINK, VESTIMENTA_TITULO, VESTIMENTA_DETALLE as DRESS_CODE,
   FECHA_LIMITE_RSVP as RSVP_DEADLINE, MUSICA_URL, FOTO_PORTADA,
   GALERIA as GALLERY, PROGRAMA as PROGRAM, DESEOS, RSVP_URL,
-  FRASE_SUPERIOR, TEXTO_PORTADA, TEXTO_BOTON,FOTO_PORTADA_MOVIL, TEXTO_SOBRE, FIRMA
+  FRASE_SUPERIOR, TEXTO_PORTADA, TEXTO_BOTON,FOTO_PORTADA_MOVIL, TEXTO_SOBRE, FIRMA, CREDITO_WEB, INSTAGRAM_URL
 } from './datos'
 
 // Nombre del invitado desde el enlace: ?para=Familia-Perez → "Familia Perez"
@@ -897,7 +897,7 @@ export default function App() {
         </section> */}
 
         {/* ── Footer ── */}
-        <footer className="py-16 px-6 border-t text-center" style={{ borderColor: 'rgba(212,175,106,0.1)' }}>
+        <footer className="pt-16 pb-28 md:pb-16 px-6 border-t text-center" style={{ borderColor: 'rgba(212,175,106,0.1)' }}>
           <div
             className="text-gold-gradient glow-gold leading-[1.2] mb-3"
             style={{ fontFamily: 'Great Vibes, cursive', fontSize: '3.5rem' }}
@@ -907,6 +907,38 @@ export default function App() {
           <p className="font-outfit text-cream/70 text-base tracking-widest uppercase">{EDAD} Años · {MES_ANIO_PIE}</p>
           <StarDivider />
           <p className="font-outfit text-cream/60 text-base mt-6">Te esperamos con cariño · {FIRMA}</p>
+
+          {/* Crédito */}
+          <div className="mt-12 pt-6 border-t flex flex-col items-center gap-3" style={{ borderColor: 'rgba(212,175,106,0.12)' }}>
+            <p className="font-outfit text-cream/55 text-sm tracking-wide">
+              Creado por{' '}
+              <a
+                href={CREDITO_WEB}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold-light font-medium hover:text-gold transition-colors"
+              >
+                invitalive.pe
+              </a>
+            </p>
+            {INSTAGRAM_URL && (
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Invitalive"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 font-outfit text-sm text-gold-light hover:opacity-80 transition-opacity"
+                style={{ border: '1px solid rgba(212,175,106,0.35)' }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+                Síguenos en Instagram
+              </a>
+            )}
+          </div>
         </footer>
 
       </div>
